@@ -27,13 +27,16 @@ function MainPage(){
 
     let partnersList = [
         {
-            'imagePath':require('../static/images/SEISLAB.webp')
+            'imagePath':require('../static/images/SEISLAB.webp'),
+            'redirectUrl':'http://www.seislab.cl/'
         },
         {
-            'imagePath':require('../static/images/RModInria.png')
+            'imagePath':require('../static/images/RModInria.png'),
+            'redirectUrl':'https://isclab.dcc.uchile.cl/'
         },
         {
-            'imagePath':require('../static/images/ISCLab.png')
+            'imagePath':require('../static/images/ISCLab.png'),
+            'redirectUrl':'https://rmod.gitlabpages.inria.fr/website/'
         }
     ]
     return (<>
