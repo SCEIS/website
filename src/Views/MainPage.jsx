@@ -1,4 +1,5 @@
 import ImageLogo from '../Components/ImageLogo';
+import PartnersSection from '../Components/PartnersSection';
 import Section from '../Components/Section'
 import { Box } from '@mui/material'
 function MainPage(){
@@ -24,7 +25,19 @@ function MainPage(){
     let ciceiLogoSx = {width:{xs:0.7,sm:0.7,md:0.9},mt:{xs:3,sm:7},maxWidth:200};
     let ciceiLogo = (<ImageLogo imagePath={ciceiLogoPath} sx={ciceiLogoSx}/>)
 
-    return (<Section sx={sectionOneSx}>
+    let partnersList = [
+        {
+            'imagePath':require('../static/images/SEISLAB.webp')
+        },
+        {
+            'imagePath':require('../static/images/RModInria.png')
+        },
+        {
+            'imagePath':require('../static/images/ISCLab.png')
+        }
+    ]
+    return (<>
+    <Section sx={sectionOneSx}>
         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             {sceisLogo}
             <Box sx={{display:'flex',justifyContent:'center'}}>
@@ -32,6 +45,8 @@ function MainPage(){
                 {ciceiLogo}
             </Box>
         </Box>
-    </Section>);
+    </Section>
+    <PartnersSection partnersList={partnersList}></PartnersSection>
+    </>);
 }
 export {MainPage}
