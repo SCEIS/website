@@ -1,7 +1,7 @@
 import ImageLogo from '../Components/ImageLogo';
 import PartnersSection from '../Components/PartnersSection';
 import Section from '../Components/Section'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 function MainPage(){
     let sectionOneSx = {
         background:'linear-gradient(180deg, #3177EE 0%, #2059BA 50.87%, #113D8A 100%);',
@@ -51,7 +51,9 @@ function MainPage(){
         </Box>
     </Section>
     <Section>
+        <Typography>
         Sobre nosotros
+        </Typography>
     </Section>
     <PartnersSection partnersList={partnersList}></PartnersSection>
     </Box>);
