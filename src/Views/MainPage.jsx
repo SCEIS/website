@@ -5,6 +5,7 @@ import { Box } from '@mui/material'
 function MainPage(){
     let sectionOneSx = {
         background:'linear-gradient(180deg, #3177EE 0%, #2059BA 50.87%, #113D8A 100%);',
+        width:1,
         minHeight:{xs:400,sm:450,md:500},
         border:0,
         display:'flex',
@@ -39,7 +40,7 @@ function MainPage(){
             'redirectUrl':'https://rmod.gitlabpages.inria.fr/website/'
         }
     ]
-    return (<>
+    return (<Box sx={{flexDirection:'column',display:'flex',alignItems:'center'}}>
     <Section sx={sectionOneSx}>
         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             {sceisLogo}
@@ -49,7 +50,10 @@ function MainPage(){
             </Box>
         </Box>
     </Section>
+    <Section>
+        Sobre nosotros
+    </Section>
     <PartnersSection partnersList={partnersList}></PartnersSection>
-    </>);
+    </Box>);
 }
 export {MainPage}
