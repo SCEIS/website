@@ -2,6 +2,28 @@ import ImageLogo from '../Components/ImageLogo';
 import PartnersSection from '../Components/PartnersSection';
 import Section from '../Components/Section'
 import { Box, Typography } from '@mui/material'
+
+function WhoWeAreSection(){
+    return (<Section>
+        <Typography variant='h4'>¿Quienes somos?</Typography>
+        <Typography>Somos un grupo de estudiantes de la carrera de Ing. de sistema cuyo objetivo es realizar, publicar y diseminar investigaciones científicas de alto impacto en ciencias de la computación. La SCEIS investiga modelos, técnicas, herramientas para mejorar la calidad de los productos y procesos de desarrollo de software.</Typography>
+    </Section>);
+}
+
+function BenefitsSection(){
+    return (<Section>
+        <Typography variant='h4'>Beneficios de los miembros</Typography>
+        <Typography>Reconocimiento de las horas realizadas, se ayudará en la materia de metodología de la investigación, se ayudará con el tema de tesis.  Apoyo de la SCEIS en su investigación.</Typography>
+    </Section>);
+}
+
+function ResposabilitiesSection(){
+    return (<Section>
+        <Typography variant='h4'>Responsabilidades de los miembros</Typography>
+        <Typography>Apoyar en todos los eventos de la sociedad, ya sea en el área de logística, asistencia y requerimientos de los organizadores.</Typography>
+    </Section>);
+}
+
 function MainPage(){
     let sectionOneSx = {
         background:'linear-gradient(180deg, #3177EE 0%, #2059BA 50.87%, #113D8A 100%);',
@@ -50,11 +72,9 @@ function MainPage(){
             </Box>
         </Box>
     </Section>
-    <Section>
-        <Typography>
-        Sobre nosotros
-        </Typography>
-    </Section>
+    <WhoWeAreSection/>
+    <BenefitsSection/>
+    <ResposabilitiesSection/>
     <PartnersSection partnersList={partnersList}></PartnersSection>
     </Box>);
 }

@@ -8,8 +8,39 @@ import { createTheme, ThemeProvider, styled, responsiveFontSizes } from '@mui/ma
 
 let theme = createTheme({
   typography: {
-    fontFamily: `"Sora", sans-serif`,
-  },
+    fontFamily: `'Sintony', sans-serif`,
+    h1 : {
+      fontFamily: `"Sora", sans-serif`,
+      fontWeight : 600,
+    },
+    h2 : {
+      fontFamily: `"Sora", sans-serif`,
+    },
+    h3 : {
+      fontFamily: `"Sora", sans-serif`,
+      fontWeight : 600,
+    },
+    h4 : {
+      fontFamily: `'Sen', sans-serif`,
+      fontWeight : 500,
+      paddingBottom: 10
+    },
+    h5 : {
+      fontFamily: `'Sen', sans-serif`,
+    },
+    subtitle1 : {
+      fontWeight : 400,
+      fontSize : 14,
+    },
+    subtitle2 : {
+      fontWeight : 400,
+      fontSize : 12
+    },
+    code : {
+      fontFamily : `'Source Code Pro', monospace;`,
+      fontWeight : 400,
+    }
+  }
 });
   
 theme = responsiveFontSizes(theme);
