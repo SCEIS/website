@@ -19,8 +19,7 @@ function EnrollmentForm(){
         [name]: value,
         }));
         if(name=='email'){
-            console.log(value);
-            setEmailError(value=='' || !emailRegex.test(value))
+            setEmailError(!(value=='' || emailRegex.test(value)))
         }
     };
 
@@ -45,6 +44,7 @@ function EnrollmentForm(){
             name='lastName'
             value={enrollmentForm.lastName}
             onChange={handleChange}
+            required
         />
         <TextField fullWidth
             sx={sxInput}
@@ -54,6 +54,7 @@ function EnrollmentForm(){
             name='email'
             value={enrollmentForm.email}
             onChange={handleChange}
+            required
         />
         {emailError ? invalidEmailAlert : null}
         <Button type="submit">Enviar</Button>
@@ -61,9 +62,12 @@ function EnrollmentForm(){
 }
 
 function Enrollment(){
+    const [showForm,setShowForm]=useState(false);
+    let enrollmentForm = <EnrollmentForm/>;
     return (<Container>
         <Typography variant='h4'>Quiero ser parte!</Typography>
-        <EnrollmentForm/>
+        <Button onClick={(e)=>{setShowForm(!showForm)}}>Unirme a la SCEIS</Button>
+        {showForm ? enrollmentForm : null}
     </Container>);
 }
 export {Enrollment}
